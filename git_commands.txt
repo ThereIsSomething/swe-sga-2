@@ -1,0 +1,89 @@
+Git commands used for the assignment (in order)
+
+1. git init -b main
+   Initialized the repository locally and named the first branch main.
+
+2. git add index.html about.html
+   Staged the two new HTML files for the first commit.
+
+3. git commit -m "Initial project pages"
+   Saved the initial version of both pages.
+
+4. git add index.html
+   Staged the update to the home page.
+
+5. git commit -m "Add a short introduction to home page"
+   Saved the second version of the project.
+
+6. git branch feature
+   Created the feature branch from the current main branch.
+
+7. git switch feature
+   Moved to the feature branch to work on about.html.
+
+8. git add about.html
+   Staged the change made on the feature branch.
+
+9. git commit -m "Add branch note to about page"
+   Saved the feature branch change.
+
+10. git switch main
+    Returned to the main branch.
+
+11. git merge --no-ff feature -m "Merge feature branch"
+    Merged the feature work and kept a visible merge commit.
+
+12. git log --oneline --graph --decorate --all
+    Displayed the commit history and branch structure.
+
+13. git add .gitignore
+    Staged the ignore rules for log files and the temp folder.
+
+14. git commit -m "Ignore log files and temp folder"
+    Saved the .gitignore file.
+
+15. git add draft-note.txt
+    Staged a temporary note for the undo demonstration.
+
+16. git commit -m "Add temporary draft note"
+    Made the additional commit required for the undo step.
+
+17. git revert --no-edit HEAD
+    Undid that commit with a new commit, preserving the history.
+
+18. git status --short
+    Checked that the working tree was clean after the revert.
+
+19. git log --oneline --graph --decorate --all
+    Confirmed the temporary commit and its revert both appear in history.
+
+20. git check-ignore example.log temp/example.txt
+    Confirmed that both ignore patterns match sample paths.
+
+21. git add git_commands.txt
+    Staged this command documentation file.
+
+22. git commit -m "Document Git commands"
+    Saved the command record in the repository.
+
+23. git remote add origin git@github.com:ThereIsSomething/swe-sga-2.git
+    Connected the existing local repository to the new GitHub repository.
+
+24. git push -u origin main
+    Pushed main and set origin/main as its upstream branch.
+
+25. git push origin feature
+    Pushed the feature branch so its separate commit is visible on GitHub.
+
+26. git remote -v
+    Displayed the SSH remote URL used by this local repository.
+
+27. git status --short --branch
+    Checked the current branch and clean repository state after pushing.
+
+28. git log --oneline --graph --decorate --all
+    Displayed the final history, including local and remote branches.
+
+GitHub CLI command also used:
+gh repo create ThereIsSomething/swe-sga-2 --public --description "Git workflow assignment project"
+    Created a public GitHub repository only after the local repository was set up.
